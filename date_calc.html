@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Date Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         /* Base styling */
         body {
@@ -15,17 +16,19 @@
             text-align: center;
             color: #c2185b;
             margin-bottom: 10px;
+            font-size: 2.5em;
         }
         p.description {
             text-align: center;
-            font-size: 1.1em;
+            font-size: 1.2em;
             color: #6a1b9a;
             margin-bottom: 20px;
         }
         form {
             background: #fff;
             padding: 20px;
-            max-width: 400px;
+            max-height: 600px;
+            max-width: 600px;
             margin: 0 auto;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,7 +50,7 @@
             color: #4a4a4a;
             outline: none;
             transition: border 0.3s;
-            box-sizing: border-box; /* Include padding/border in width */
+            box-sizing: border-box;
         }
         input[type="date"]:focus,
         input[type="number"]:focus {
@@ -77,12 +80,20 @@
             color: #6a1b9a;
         }
 
-        /* Mobile responsive tweaks */
-        @media (max-width: 480px) {
+        /* Enhanced Mobile Styling */
+        @media (max-width: 600px) {
             body {
                 margin: 10px;
             }
+            h1 {
+                font-size: 2em;
+            }
+            p.description {
+                font-size: 1.1em;
+            }
             form {
+                width: 50%; /* Half the screen width on mobile */
+                margin: 0 auto; /* Center it */
                 padding: 15px;
             }
             label {
@@ -90,15 +101,15 @@
             }
             input[type="date"],
             input[type="number"] {
-                padding: 8px;
-                font-size: 0.9em;
+                padding: 12px;
+                font-size: 1.1em;
             }
             button {
-                padding: 10px;
-                font-size: 1em;
+                padding: 14px;
+                font-size: 1.1em;
             }
-            p.description {
-                font-size: 1em;
+            #result {
+                font-size: 1.2em;
             }
         }
     </style>
