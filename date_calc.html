@@ -5,17 +5,67 @@
     <title>Date Calculator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #fce4ec; /* soft pink */
+            font-family: 'Poppins', sans-serif;
             margin: 40px;
+            color: #4a4a4a;
         }
-        label, input {
+        h1 {
+            text-align: center;
+            color: #c2185b;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
             display: block;
-            margin: 10px 0;
+            margin: 15px 0 5px;
+            font-size: 1.1em;
+            color: #6a1b9a;
+        }
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #f8bbd0;
+            border-radius: 10px;
+            font-size: 1em;
+            background-color: #f3e5f5;
+            color: #4a4a4a;
+            outline: none;
+            transition: border 0.3s;
+        }
+        input[type="date"]:focus,
+        input[type="number"]:focus {
+            border-color: #c2185b;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #c2185b;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #a3164a;
         }
         #result {
             margin-top: 20px;
-            font-size: 1.2em;
+            text-align: center;
+            font-size: 1.3em;
             font-weight: bold;
+            color: #6a1b9a;
         }
     </style>
 </head>
