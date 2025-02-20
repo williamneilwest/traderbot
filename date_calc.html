@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Date Calculator</h1>
+<form id="calcForm">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" required>
+
+    <label for="days">Length of Time (in days):</label>
+    <input type="number" id="days" required>
+
+    <button type="submit">Calculate Completion Date</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    document.getElementById('calcForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get the values from the input fields
+        const startDateValue = document.getElementById('startDate').value;
+        const daysValue = parseInt(document.getElementById('days').value, 10);
+
+        if (!startDateValue || isNaN(daysValue)) {
+            alert("Please enter valid values.");
+            return;
+        }
+
+        // Create a Date object from the start date
+        const startDate = new Date(startDateValue);
+
+        // Calculate the completion date by adding the specified days
+        startDate.setDate(startDate.getDate() + daysValue);
+
+        // Display the result
+        document.getElementById('result').textContent =
+            "Completion Date: " + startDate.toDateString();
+    });
+</script>
+</body>
+</html>
