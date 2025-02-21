@@ -13,6 +13,7 @@
 </head>
 <body>
 
+<!-- Start Header Area -->
 <header class="header navbar-area">
   <div class="container">
     <div class="row align-items-center">
@@ -51,12 +52,9 @@
                   <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                      data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
                      aria-expanded="false" aria-label="Toggle navigation">Socials</a>
-                  <ul class="sub-menu collapse" id="submenu-2-2">
+                  <ul class="sub-menu collapse" id="submenu-1-2">
                     <li class="nav-item"><a href="https://discord.gg/cws2VKA3">Discord</a></li>
                   </ul>
-                </li>
-                <li class="nav-item">
-                  <a href="contact.html" aria-label="Toggle navigation">Contact</a>
                 </li>
               </ul>
             </div> <!-- navbar collapse -->
@@ -140,22 +138,20 @@
     </ul>
   </div>
 
-  <div class="about-image">
-    <img src="assets/images/about/trading-bots.png" alt="TSai Trading Bots">
-  </div>
-
   <div class="about-cta">
-    <a href="signup.html">Start Investing Today</a>
+    <a href="https://www.techstarvoip.com/#/">Start Investing Today</a>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- Start Footer Area -->
 <footer class="footer section">
+  <!-- Start Footer Top -->
   <div class="footer-top">
     <div class="container">
       <div class="inner-content">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-12">
+            <!-- Single Widget -->
             <div class="single-footer f-about">
               <div class="logo">
                 <a href="index.html">
@@ -165,35 +161,141 @@
               <h4 class="social-title">Join Us On:</h4>
               <ul class="social">
                 <li><a href="https://discord.gg/cws2VKA3"><i class="lni lni-discord"></i></a></li>
+
               </ul>
             </div>
+            <!-- End Single Widget -->
           </div>
+
           <div class="col-lg-4 col-md-6 col-12">
+            <!-- Single Widget -->
             <div class="single-footer newsletter">
               <h3>Subscribe</h3>
-              <p>Join our Discord for the latest updates!</p>
-              <form action="#" method="get" class="newsletter-form">
+              <p>Subscribe to our discord for the latest updates!</p>
+              <form action="#" method="get" target="_blank" class="newsletter-form">
                 <input name="EMAIL" placeholder="Email address" required="required" type="email">
                 <div class="button">
                   <button class="sub-btn"><i class="lni lni-envelope"></i></button>
                 </div>
               </form>
             </div>
+            <!-- End Single Widget -->
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!--/ End Footer Top -->
+  <!-- Start Copyright Area -->
+  <div class="copyright-area">
+    <div class="container">
+      <div class="inner-content">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <p class="copyright-text">© 2025 TradeBot - All Rights Reserved</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <p class="copyright-owner">Designed and Developed by <a href="https://github.com/williamneilwest"
+                                                                    rel="nofollow" target="_blank">William West</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Copyright Area -->
 </footer>
+<!--/ End Footer Area -->
 
-<!-- Scroll Top -->
+<!-- ========================= scroll-top ========================= -->
 <a href="#" class="scroll-top">
   <i class="lni lni-chevron-up"></i>
 </a>
 
-<!-- JavaScript -->
+<!-- ========================= JS here ========================= -->
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/tiny-slider.js"></script>
+<script src="assets/js/glightbox.min.js"></script>
+<script src="assets/js/count-up.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+  //========= Road Map
+  tns({
+    container: '.road-map-slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    mouseDrag: true,
+    gutter: 0,
+    nav: true,
+    controls: false,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      540: {
+        items: 3,
+      },
+      768: {
+        items: 4,
+      },
+      992: {
+        items: 4,
+      },
+      1170: {
+        items: 6,
+      }
+    }
+  });
 
+  //========= testimonial
+  tns({
+    container: '.testimonial-slider',
+    items: 3,
+    slideBy: 'page',
+    autoplay: false,
+    mouseDrag: true,
+    gutter: 0,
+    nav: true,
+    controls: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      540: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 2,
+      },
+      1170: {
+        items: 3,
+      }
+    }
+  });
+
+  //====== counter up
+  var cu = new counterUp({
+    start: 0,
+    duration: 2000,
+    intvalues: true,
+    interval: 100,
+    append: " ",
+  });
+  cu.start();
+
+  //========= glightbox
+  GLightbox({
+    'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw',
+    'type': 'video',
+    'source': 'youtube',
+    'width': 900,
+    'autoplayVideos': true,
+  });
+
+</script>
 </body>
 </html>
