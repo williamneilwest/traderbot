@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Increase the size of social icons */
+.footer .social a i {
+  font-size: 32px; /* Adjust this size (default might be 18px or 24px) */
+}
+
 body {
   font-family: "DM Sans", sans-serif;
   font-weight: normal;
